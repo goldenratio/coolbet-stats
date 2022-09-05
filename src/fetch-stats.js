@@ -36,6 +36,9 @@ function getContentData() {
             const formattedData = parsedData.map(data => {
               let gameNameUrlSuffix = replaceAll(data.name.toLowerCase(), ' ', '-');
               gameNameUrlSuffix = replaceAll(gameNameUrlSuffix, '\'', '');
+              gameNameUrlSuffix = replaceAll(gameNameUrlSuffix, ':', '');
+              gameNameUrlSuffix = replaceAll(gameNameUrlSuffix, '’', '');
+              gameNameUrlSuffix = replaceAll(gameNameUrlSuffix, ',', '');
               return  {
                 id: data.id,
                 gameName: data.name,
