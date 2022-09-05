@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "coolbet-stats": "./src/index.js"
+  },
   "scripts": {
     "build": "rimraf 'dist' && node ./src/index.js"
   },

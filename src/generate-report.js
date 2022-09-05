@@ -1,12 +1,15 @@
+const path = require('path');
 const fs = require('fs-extra')
 const replace = require('replace-in-file');
 
-const outDir = 'dist';
+const outDir = path.resolve('dist');
 
 function generateReport(contentList) {
+  const templateFile = path.resolve('html-template/index.html');
+  const destFile = path.resolve(`${outDir}/index.html`);
+
   fs.emptydirSync(outDir);
-  const destFile = `${outDir}/index.html`;
-  fs.copySync('html-template/index.html', destFile);
+  fs.copySync(templateFile, destFile);
 
   const buildDate = new Date().toUTCString();
   replace.sync({
@@ -29,6 +32,8 @@ function generateReport(contentList) {
     from: /{CONTENT}/g,
     to: htmlContent.join('\n')
   })
+
+  return destFile;
 }
 
 module.exports = {
