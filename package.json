@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node ./src/index.js"
+    "build": "rimraf 'dist' && node ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "dependencies": {
     "fs-extra": "^10.1.0",
     "node-fetch": "^2.6.7",
-    "replace-in-file": "^6.3.5"
+    "replace-in-file": "^6.3.5",
+    "rimraf": "^3.0.2"
   }
 }
