@@ -1,5 +1,5 @@
-// const gamesPlayedCountUrl =  'https://www.coolbet.com/s/casino-statistics/fo/game-played-count';
-const gamesPlayedCountUrl =  'http://localhost:8081/game-played-count.json';
+const gamesPlayedCountUrl =  'https://www.coolbet.com/s/casino-statistics/fo/game-played-count';
+// const gamesPlayedCountUrl =  'http://localhost:8081/game-played-count.json';
 
 const playUrlPrefix = 'https://www.coolbet.com/en/game/';
 
@@ -21,8 +21,8 @@ const defaultUrlContentConfig = {
 const generateContentUrl = (param) => {
   /** @type {UrlContentConfig} */
   const normalisedParam = { ... defaultUrlContentConfig, ... param };
-  // const contentJSONUrl =  new URL('https://www.coolbet.com/s/casino/fo/games/');
-  const contentJSONUrl =  new URL('http://localhost:8081/games.json');
+  const contentJSONUrl =  new URL('https://www.coolbet.com/s/casino/fo/games/');
+  // const contentJSONUrl =  new URL('http://localhost:8081/games.json');
   contentJSONUrl.searchParams.append('country', normalisedParam.country);
   contentJSONUrl.searchParams.append('currency', normalisedParam.currency);
   contentJSONUrl.searchParams.append('device', normalisedParam.device);
