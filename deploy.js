@@ -11,5 +11,5 @@ const options = {
 const git = simpleGit(options);
 git
   .add('./*')
-  .commit('build');
-// git.push();
+  .commit('build')
+  .push();
