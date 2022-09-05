@@ -23,7 +23,7 @@ function generateReport(contentList) {
     <tr>
       <td>${data.gameName}</td>
       <td>${data.activeUsers}</td>
-      <td><a href="${data.playUrl}" target="_blank">${data.playUrl}</a></td>
+      <td><a href="${data.playUrl}" rel="noopener noreferrer" target="_blank">${data.playUrl}</a></td>
     </tr>
     `;
   })
