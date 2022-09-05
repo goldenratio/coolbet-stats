@@ -17,7 +17,7 @@ preview
 docs
 output
 
-deploy.sh
+crontab.sh
 
 # OS generated files #
 Thumbs.db
