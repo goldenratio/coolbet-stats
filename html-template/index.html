@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CoolBet Stats</title>
+  <style>
+    body {
+      margin: 20px;
+      font-family: arial, sans-serif;
+      font-size: 16px;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .last-updated-info {
+      padding-bottom: 20px;
+      padding-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <div class="last-updated-info">Last updated: {LAST_UPDATED}</div>
+  <div>
+    <table>
+      <tr>
+        <th>Game Name </th>
+        <th>Active Users</th>
+        <th></th>
+      </tr>
+      {CONTENT}
+    </table>
+  </div>
+</div>
+</body>
+</html>

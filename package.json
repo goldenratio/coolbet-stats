@@ -1,0 +1,24 @@
+{
+  "name": "coolbet-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goldenratio/coolbet-stats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goldenratio/coolbet-stats/issues"
+  },
+  "homepage": "https://github.com/goldenratio/coolbet-stats#readme",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "node-fetch": "^2.6.7",
+    "replace-in-file": "^6.3.5"
+  }
+}

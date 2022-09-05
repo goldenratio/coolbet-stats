@@ -1,0 +1,22 @@
+.awcache
+.idea
+.vscode
+.tmp
+.DS_Store
+.scannerwork
+.npmrc
+
+*.log
+report.*.json
+raven.json
+package-lock.json
+
+node_modules
+coverage
+preview
+docs
+output
+dist
+
+# OS generated files #
+Thumbs.db
