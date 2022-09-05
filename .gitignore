@@ -17,5 +17,7 @@ preview
 docs
 output
 
+deploy.sh
+
 # OS generated files #
 Thumbs.db
