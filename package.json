@@ -7,7 +7,8 @@
     "coolbet-stats": "./src/index.js"
   },
   "scripts": {
-    "build": "rimraf 'dist' && node ./src/index.js"
+    "build": "node ./src/index.js",
+    "deploy": "node deploy.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "fs-extra": "^10.1.0",
     "node-fetch": "^2.6.7",
     "replace-in-file": "^6.3.5",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "simple-git": "^3.14.0"
   }
 }
