@@ -45,7 +45,7 @@ function getContentData() {
     fetch(contentUrl, fetchOptions)
       .then(response => {
         if (!response.ok) {
-          reject('error: cannot reach url ', contentUrl, ', status code: ', response.status);
+          reject(`error: cannot reach url: ${contentUrl}, status code: ${response.status}`);
           return;
         }
         response.json()
@@ -76,7 +76,7 @@ function getActiveUsers() {
     fetch(gamesPlayedCountUrl, fetchOptions)
       .then(res => {
         if (!res.ok) {
-          reject('error: cannot reach url ', gamesPlayedCountUrl, ', status code: ', res.status);
+          reject(`error: cannot reach url: ${gamesPlayedCountUrl}, status code: ${res.status}`);
           return;
         }
         res.json()
