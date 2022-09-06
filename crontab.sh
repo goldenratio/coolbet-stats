@@ -7,7 +7,7 @@ echo $tmp_dir
 git clone $repository $tmp_dir
 
 cd $tmp_dir
-npm i
+npm ci
 
 node ./src/index.js
 node ./deploy.js
