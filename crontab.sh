@@ -9,7 +9,7 @@ git clone $repository $tmp_dir
 cd $tmp_dir
 npm ci
 
-node ./src/index.js
-node ./deploy.js
+npm run build
+npm run deploy
 
 rm -rf $tmp_dir
