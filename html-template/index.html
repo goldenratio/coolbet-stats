@@ -37,7 +37,7 @@
       text-decoration: underline;
     }
 
-    .last-updated-info {
+    #last-updated-info {
       padding-bottom: 20px;
       padding-top: 10px;
       font-weight: bold;
@@ -46,7 +46,7 @@
 </head>
 <body>
 <div>
-  <div class="last-updated-info">Last updated: {LAST_UPDATED}</div>
+  <div id="last-updated-info">Last updated: <span></span></div>
   <div>
     <table>
       <tr>
@@ -58,5 +58,43 @@
     </table>
   </div>
 </div>
+<script type="text/javascript">
+  function updateLastUpdatedInfo() {
+    var buildDate = {LAST_UPDATED};
+    var timeElapsed = Date.now() - buildDate;
+    const lastUpdatedLabel = document.querySelector('#last-updated-info span');
+    lastUpdatedLabel.innerText = getRelativeTime(timeElapsed);
+  }
+
+  function getRelativeTime(ms){
+    var SECOND_MS = 1000;
+    var MINUTE_MS = 60 * SECOND_MS;
+    var HOUR_MS = 60 * MINUTE_MS;
+    var DAY_MS = 24 * HOUR_MS;
+    var WEEK_MS = 7 * DAY_MS;
+    var MONTH_MS = 30 * DAY_MS;
+
+    var lookup = ["months", "weeks", "days", "hours", "minutes", "seconds"];
+    var values = [];
+    values.push(ms / MONTH_MS); ms %= MONTH_MS;
+    values.push(ms / WEEK_MS); ms %= WEEK_MS;
+    values.push(ms / DAY_MS); ms %= DAY_MS;
+    values.push(ms / HOUR_MS); ms %= HOUR_MS;
+    values.push(ms / MINUTE_MS); ms %= MINUTE_MS;
+    values.push(ms / SECOND_MS); ms %= SECOND_MS;
+
+    var pretty = "about ";
+    for(var i=0 ; i <values.length; i++){
+      var val = Math.round(values[i]);
+      if(val <= 0) continue;
+
+      pretty += val + " " + lookup[i] + " ago";
+      break;
+    }
+    return pretty;
+  }
+
+  updateLastUpdatedInfo();
+</script>
 </body>
 </html>

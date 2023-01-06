@@ -11,7 +11,7 @@ function generateReport(contentList) {
   fs.emptydirSync(outDir);
   fs.copySync(templateFile, destFile);
 
-  const buildDate = new Date().toUTCString();
+  const buildDate = Date.now();
   replace.sync({
     files: destFile,
     from: /{LAST_UPDATED}/g,
